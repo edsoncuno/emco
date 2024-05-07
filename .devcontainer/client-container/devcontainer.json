@@ -1,0 +1,15 @@
+{
+    "name": "devcontainer-client",
+    "dockerComposeFile": "../../docker-compose.yml",
+    "service": "emco-client",
+    "shutdownAction": "none",
+    "workspaceFolder": "/workspace/client",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint"
+            ]
+        }
+    }
+}

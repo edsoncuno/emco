@@ -1,0 +1,20 @@
+{
+    "name": "devcontainer-server",
+    "dockerComposeFile": "../../docker-compose.yml",
+    "service": "emco-server",
+    "shutdownAction": "none",
+    "workspaceFolder": "/workspace/server",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint",
+                "rangav.vscode-thunder-client"
+            ]
+        }
+    },
+    "containerEnv": {
+        "MONGODB_DATABASE_URI": "mongodb://emco-mongodb/",
+        "SERVER_PORT:": "3000"
+    }
+}
