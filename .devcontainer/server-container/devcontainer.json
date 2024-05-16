@@ -15,6 +15,6 @@
     },
     "containerEnv": {
         "MONGODB_DATABASE_URI": "mongodb://emco-mongodb/",
-        "SERVER_PORT:": "3000"
+        "SERVER_PORT": "3000"
     }
 }
