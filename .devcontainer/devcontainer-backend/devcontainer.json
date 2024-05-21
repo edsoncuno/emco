@@ -1,0 +1,22 @@
+{
+    "name": "devcontainer-emco-backend",
+    "dockerComposeFile": "../../docker-compose.yml",
+    "service": "emco-backend",
+    "shutdownAction": "none",
+    "workspaceFolder": "/workspace/emco-backend",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "rangav.vscode-thunder-client",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    "postCreateCommand": "sudo npm install -g npm; npm i",
+    "containerEnv": {
+        "MONGODB_DATABASE_URI": "mongodb://emco-mongodb/emco",
+        "JWT_SECRET": "mysecret",
+        "SERVER_PORT": "3000"
+    }
+}

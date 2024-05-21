@@ -1,5 +1,5 @@
 services:
-  emco-client:
+  emco-frontend:
     image: mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm
     volumes:
       - .:/workspace:cached
@@ -7,10 +7,10 @@ services:
     ports:
       - 5173:5173
     links:
-      - emco-server
+      - emco-backend
     depends_on:
-      - emco-server
-  emco-server:
+      - emco-backend
+  emco-backend:
     image: mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm
     volumes:
       - .:/workspace:cached

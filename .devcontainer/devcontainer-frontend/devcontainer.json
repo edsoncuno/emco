@@ -1,0 +1,20 @@
+{
+    "name": "devcontainer-emco-frontend",
+    "dockerComposeFile": "../../docker-compose.yml",
+    "service": "emco-frontend",
+    "shutdownAction": "none",
+    "workspaceFolder": "/workspace/emco-frontend",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    "postCreateCommand": "sudo npm install -g npm; npm install",
+    "containerEnv": {
+        "SERVER_URL": "",
+        "CLIENT_PORT": "3000"
+    }
+}
